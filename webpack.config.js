@@ -17,6 +17,7 @@ module.exports = {
       {
         test: /\.(ts|tsx)$/,
         use: ["ts-loader"],
+        exclude: [path.resolve(__dirname, "./functions")],
       },
       {
         test: /\.(css)$/,
