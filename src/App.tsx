@@ -1,11 +1,11 @@
 import "./public/css/reset.css";
+import "./public/css/style.css";
 import Img from "./public/img/a.png";
 
 export const App = (): JSX.Element => {
-  const a = 0;
   return (
     <div>
-      hello <img src={Img}></img>
+      hello！！！！ <img src={Img}></img>
     </div>
   );
 };
