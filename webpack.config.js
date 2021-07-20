@@ -16,14 +16,17 @@ module.exports = {
     rules: [
       {
         test: /\.(ts|tsx)$/,
+        exclude: /functions/,
         use: ["ts-loader"],
       },
       {
         test: /\.(css)$/,
+        exclude: /functions/,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
         test: /\.(png|jpg)$/,
+        exclude: /functions/,
         use: ["file-loader"],
       },
     ],
