@@ -22,10 +22,12 @@ module.exports = {
       {
         test: /\.(css)$/,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
+        exclude: [path.resolve(__dirname, "./functions")],
       },
       {
         test: /\.(png|jpg)$/,
         use: ["file-loader"],
+        exclude: [path.resolve(__dirname, "./functions")],
       },
     ],
   },
