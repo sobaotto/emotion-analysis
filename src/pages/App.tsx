@@ -1,6 +1,6 @@
-import "./public/css/reset.css";
-import "./public/css/style.css";
-import Img from "./public/img/a.png";
+import "src/assets/css/reset.css";
+import "src/assets/css/style.css";
+import Img from "src/assets/img/a.png";
 
 export const App = (): JSX.Element => {
   return (

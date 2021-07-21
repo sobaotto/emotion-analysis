@@ -5,7 +5,10 @@
     "jsx": "react-jsx",
     "strict": true,
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "baseUrl": "./src"
+    "forceConsistentCasingInFileNames": true
+    // "baseUrl": "./",
+    // "paths": {
+    //   "src/*": ["src/*"]
+    // }
   }
 }
