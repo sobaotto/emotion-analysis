@@ -1,11 +1,42 @@
+import { useState } from "react";
 import "src/assets/css/reset.css";
 import "src/assets/css/style.css";
-import Img from "src/assets/img/a.png";
+import { Textarea, Flex, Input, Text } from "@chakra-ui/react";
 
 export const App = (): JSX.Element => {
+  const [inputText, setInputText] = useState<string>("");
+
+  const hundleText = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setInputText(event.target.value);
+  };
+
+  const fetchAnalysisResult = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    if (inputText.trim() === "") {
+      alert("文章を入力していください。");
+      return;
+    }
+  };
+
   return (
-    <div>
-      hello！！！！ <img src={Img}></img>
-    </div>
+    <>
+      <Text size="3xl" textAlign="center" marginTop="100px">
+        今日のあなたの気分は？
+      </Text>
+      <form onSubmit={fetchAnalysisResult}>
+        <Flex flexDirection="column" alignItems="center">
+          <Textarea
+            placeholder="ここに文章を入力して下さい"
+            value={inputText}
+            onChange={hundleText}
+            marginTop="30px"
+            rows={15}
+            name="text"
+          />
+          <Input type="submit" value="分析する" marginTop="20px"></Input>
+        </Flex>
+      </form>
+    </>
   );
 };
