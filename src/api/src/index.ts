@@ -1,9 +1,19 @@
 import * as functions from "firebase-functions";
+import { quickstart } from "./emotion-analysis";
+import * as express from "express";
+import { router as messagesRouter } from "./routers/messages/route";
 
-// Start writing Firebase Functions
-// https://firebase.google.com/docs/functions/typescript
+const app = express();
+app.use("/", messagesRouter);
 
-export const helloWorld = functions.https.onRequest((request, response) => {
-  functions.logger.info("Hello logs!", { structuredData: true });
-  response.send("Hello from Firebase!");
-});
+export const api = functions.region("asia-northeast1").https.onRequest(app);
+
+export const emotion = functions
+  .region("asia-northeast1")
+  .https.onRequest((req, res) => {
+    req.body;
+    quickstart("happy").catch(() => {
+      console.error("しっぱい!!!");
+    });
+    res.send("Hello from Firebase!");
+  });
