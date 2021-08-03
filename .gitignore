@@ -5,6 +5,7 @@ dist
 *.log
 
 firestore.rules
+.firebase
 
 service-account-file.json
 google-cloud-sdk
