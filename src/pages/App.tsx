@@ -1,6 +1,6 @@
 import { useState } from "react";
-import "src/assets/css/reset.css";
-import "src/assets/css/style.css";
+import "../assets/css/reset.css";
+import "../assets/css/style.css";
 import { Textarea, Flex, Input, Text } from "@chakra-ui/react";
 
 export const App = (): JSX.Element => {
@@ -13,7 +13,9 @@ export const App = (): JSX.Element => {
   const fetchAnalysisResult = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    if (inputText.trim() === "") {
+    const text = inputText.trim();
+
+    if (text === "") {
       alert("文章を入力していください。");
       return;
     }
