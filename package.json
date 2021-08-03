@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open",
     "build": "webpack --mode development",
-    "build-pro": "webpack --mode production"
+    "build-pro": "webpack --mode production",
+    "deploy:functions": "npm run deploy --prefix ./src/api"
   },
   "repository": {
     "type": "git",
