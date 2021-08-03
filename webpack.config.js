@@ -7,9 +7,6 @@ module.exports = {
   entry: "./src/index.tsx",
   resolve: {
     extensions: [".js", ".tsx", ".ts"],
-    alias: {
-      src: path.resolve(__dirname, "./src"),
-    },
   },
   output: {
     path: path.resolve(__dirname, "./dist"),
@@ -42,5 +39,8 @@ module.exports = {
     historyApiFallback: {
       index: "/",
     },
+  },
+  stats: {
+    errorDetails: true,
   },
 };
