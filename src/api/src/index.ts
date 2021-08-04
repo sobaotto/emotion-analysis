@@ -1,10 +1,11 @@
 import * as functions from "firebase-functions";
 import { quickstart } from "./emotion-analysis";
 import * as express from "express";
-import { router as messagesRouter } from "./routers/messages/route";
+import { analysisRouter, messagesRouter } from "./routers";
 
 const app = express();
 app.use("/", messagesRouter);
+app.use("/", analysisRouter);
 
 export const api = functions.region("asia-northeast1").https.onRequest(app);
 

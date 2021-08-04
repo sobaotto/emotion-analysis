@@ -9,3 +9,5 @@ firestore.rules
 
 service-account-file.json
 google-cloud-sdk
+
+memo.md
