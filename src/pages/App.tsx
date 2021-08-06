@@ -1,6 +1,6 @@
 import { useState } from "react";
-import "../../assets/css/reset.css";
-import "../../assets/css/style.css";
+import "../assets/css/reset.css";
+import "../assets/css/style.css";
 import { Textarea, Flex, Input, Text } from "@chakra-ui/react";
 
 export const App = (): JSX.Element => {

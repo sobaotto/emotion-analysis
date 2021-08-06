@@ -8,8 +8,7 @@
     "start": "webpack serve --open",
     "build": "webpack --mode development",
     "build-pro": "webpack --mode production",
-    "deploy:functions": "npm run deploy --prefix ./src/api",
-    "serve:functions": "npm run serve --prefix ./src/api"
+    "deploy:functions": "npm run deploy --prefix ./src/api"
   },
   "repository": {
     "type": "git",
