@@ -1,6 +1,6 @@
 import * as functions from "firebase-functions";
 import { quickstart } from "./emotion-analysis";
-import * as express from "express";
+import express = require("express");
 import { analysisRouter, messagesRouter } from "./routers";
 
 const app = express();
